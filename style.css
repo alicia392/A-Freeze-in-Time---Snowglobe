@@ -1,11 +1,10 @@
-
 :root {
-    --ink: #372b34;
-    --muted: #8c7c87;
-    --pink: #629BB5;
-    --light: #f7fcff;
-    --border: #d6eaf0;
-    --shadow: 0 22px 70px #a9527823;
+    --ink: #1e3144;
+    --muted: #6c879e;
+    --pink: #2b7bb9;
+    --light: #f4faff;
+    --border: #cfe4f5;
+    --shadow: 0 22px 70px #2b7bb923;
 }
 
 * {
@@ -17,9 +16,9 @@ body {
     font-family: 'DM Sans', sans-serif;
     color: var(--ink);
     background:
-        radial-gradient(ellipse at 12% 12%, #ffdae8 0, transparent 40%),
-        radial-gradient(ellipse at 92% 84%, #ffefd9 0, transparent 41%),
-        #fff9fb;
+        radial-gradient(ellipse at 12% 12%, #ccebff 0, transparent 40%),
+        radial-gradient(ellipse at 92% 84%, #dff4ff 0, transparent 41%),
+        #f7fbff;
     min-height: 100vh;
 }
 
@@ -61,17 +60,17 @@ button:disabled {
 }
 
 .logo .flower {
-    color: #de7fa3;
+    color: #5ca4d6;
     font-family: sans-serif;
     font-size: 20px;
 }
 
 .pill {
     background: #fff;
-    border: 1px solid #f2dfe6;
+    border: 1px solid #d4e8f7;
     border-radius: 100px;
     padding: 9px 14px;
-    color: #9b7a88;
+    color: #5b82a3;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: .06em;
@@ -85,7 +84,7 @@ button:disabled {
 .progress-label {
     display: flex;
     justify-content: space-between;
-    color: #9a8490;
+    color: #6c8aa3;
     font-size: 11px;
     letter-spacing: .09em;
     text-transform: uppercase;
@@ -96,14 +95,14 @@ button:disabled {
 .track {
     height: 5px;
     border-radius: 6px;
-    background: #f4dce6;
+    background: #d7ecfa;
     overflow: hidden;
 }
 
 .track > div {
     height: 100%;
     width: 16.66%;
-    background: linear-gradient(90deg, #e99bbb, #d95886);
+    background: linear-gradient(90deg, #6ab7eb, #2b7bb9);
     transition: width .65s cubic-bezier(.2, .8, .2, 1);
 }
 
@@ -138,7 +137,7 @@ main {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: .22em;
-    color: #cf7193;
+    color: #468cc4;
     font-weight: 700;
     font-size: 11px;
 }
@@ -170,10 +169,10 @@ main {
 }
 
 .choice {
-    border: 1px solid #efdce4;
-    background: #fffdfd;
+    border: 1px solid #d5e8f7;
+    background: #fbfdff;
     border-radius: 22px;
-    box-shadow: 0 12px 34px #b45a7612;
+    box-shadow: 0 12px 34px #2b7bb912;
     padding: 25px 22px;
     text-align: center;
     transition: transform .2s, box-shadow .2s, border-color .2s;
@@ -183,18 +182,18 @@ main {
 .choice:focus-visible {
     transform: translateY(-5px);
     box-shadow: var(--shadow);
-    border-color: #e7a2bd;
+    border-color: #7cc0ed;
 }
 
 .choice-icon {
     display: grid;
     place-items: center;
-    background: #fff0f5;
+    background: #e6f4ff;
     border-radius: 18px;
     width: 80px;
     height: 80px;
     margin: 4px auto 18px;
-    color: #ca5b83;
+    color: #2b7bb9;
 }
 
 .choice-icon svg {
@@ -213,7 +212,7 @@ main {
 
 .choice p {
     margin: 0;
-    color: #998591;
+    color: #6c879e;
     font-size: 13px;
     line-height: 1.6;
 }
@@ -237,15 +236,15 @@ main {
     gap: 5px;
     align-items: center;
     justify-content: center;
-    filter: drop-shadow(0 8px 6px #b9889c28);
+    filter: drop-shadow(0 8px 6px #4a89b828);
 }
 
 .mini-strip {
     width: 70px;
     background: #fff;
     padding: 6px 6px 15px;
-    border: 1px solid #f0e2e6;
-    box-shadow: 0 2px 5px #57324417;
+    border: 1px solid #d9eaf7;
+    box-shadow: 0 2px 5px #1e314417;
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -253,7 +252,7 @@ main {
 
 .mini-strip i {
     height: 29px;
-    background: linear-gradient(135deg, #ffd2e3, #caa6c8);
+    background: linear-gradient(135deg, #bfe6ff, #8abce6);
     display: block;
     border-radius: 1px;
 }
@@ -267,7 +266,7 @@ main {
     height: 131px;
     padding: 9px 9px 29px;
     background: #fff;
-    box-shadow: 0 2px 6px #5732441a;
+    box-shadow: 0 2px 6px #1e31441a;
     transform: rotate(-5deg);
 }
 
@@ -275,7 +274,7 @@ main {
     width: 100%;
     height: 100%;
     display: block;
-    background: linear-gradient(145deg, #e6c6da, #f7b4a5);
+    background: linear-gradient(145deg, #b5e0fc, #82bfe8);
 }
 
 .actions {
@@ -291,27 +290,27 @@ main {
     border: 0;
     border-radius: 100px;
     padding: 14px 27px;
-    background: #d75d88;
+    background: #2b7bb9;
     color: white;
     font-weight: 700;
-    box-shadow: 0 9px 20px #d75d8830;
+    box-shadow: 0 9px 20px #2b7bb930;
     transition: transform .2s, background .2s;
 }
 
 .btn:hover:not(:disabled) {
     transform: translateY(-2px);
-    background: #c94e7b;
+    background: #21679e;
 }
 
 .btn.secondary {
     background: white;
-    color: #8c6177;
-    border: 1px solid #ecd5df;
+    color: #4b7294;
+    border: 1px solid #cbe0f2;
     box-shadow: none;
 }
 
 .btn.secondary:hover {
-    background: #fff2f6;
+    background: #ebf6ff;
 }
 
 .capture-layout {
@@ -325,7 +324,7 @@ main {
 
 .camera-shell {
     position: relative;
-    background: #322d33;
+    background: #1b2836;
     border-radius: 24px;
     padding: 12px;
     aspect-ratio: 4 / 3;
@@ -350,7 +349,7 @@ main {
     font-size: clamp(100px, 20vw, 190px);
     font-weight: 700;
     text-shadow: 0 4px 24px #0009;
-    background: #26192550;
+    background: #12213050;
     pointer-events: none;
 }
 
@@ -393,12 +392,12 @@ main {
 
 .thumb {
     aspect-ratio: 4 / 3;
-    border: 2px dashed #efcfdc;
+    border: 2px dashed #bddcf2;
     border-radius: 12px;
     display: grid;
     place-items: center;
-    background: #fff8fa;
-    color: #dcb1c2;
+    background: #f4faff;
+    color: #8ab6d9;
     font-size: 13px;
     overflow: hidden;
 }
@@ -410,12 +409,12 @@ main {
 }
 
 .thumb.active {
-    border-color: #d95b88;
+    border-color: #2b7bb9;
 }
 
 .upload-panel {
-    border: 2px dashed #e5b6c8;
-    background: #fffdfd;
+    border: 2px dashed #9ec8e8;
+    background: #fbfdff;
     border-radius: 24px;
     padding: 35px 25px;
     text-align: center;
@@ -426,7 +425,7 @@ main {
 .upload-panel svg {
     width: 48px;
     height: 48px;
-    color: #cc7397;
+    color: #468cc4;
 }
 
 .upload-panel h3 {
@@ -479,7 +478,7 @@ main {
     max-height: 410px;
     width: auto;
     height: auto;
-    box-shadow: 0 17px 36px #5631442d;
+    box-shadow: 0 17px 36px #1e31442d;
     transform: rotate(-2deg);
     background: #fff;
 }
@@ -489,7 +488,7 @@ main {
     border: 1px solid var(--border);
     border-radius: 23px;
     padding: 27px;
-    box-shadow: 0 12px 36px #b45a7610;
+    box-shadow: 0 12px 36px #2b7bb910;
 }
 
 .options h3 {
@@ -515,14 +514,14 @@ main {
     width: 38px;
     height: 38px;
     border: 3px solid white;
-    box-shadow: 0 0 0 1px #e7d4dc;
+    box-shadow: 0 0 0 1px #cbe0f2;
     outline-offset: 3px;
     border-radius: 50%;
     transition: transform .2s;
 }
 
 .swatch[aria-pressed="true"] {
-    outline: 2px solid #d95b88;
+    outline: 2px solid #2b7bb9;
     transform: scale(1.1);
 }
 
@@ -535,17 +534,17 @@ main {
 
 .note-input {
     width: 100%;
-    border: 1px solid #ebd6de;
+    border: 1px solid #cbe0f2;
     border-radius: 12px;
     padding: 15px 16px;
     outline: none;
-    background: #fffafd;
-    color: #574452;
+    background: #f7fbff;
+    color: #26435e;
 }
 
 .note-input:focus {
-    border-color: #d95b88;
-    box-shadow: 0 0 0 3px #d95b8822;
+    border-color: #2b7bb9;
+    box-shadow: 0 0 0 3px #2b7bb922;
 }
 
 .result {
@@ -560,19 +559,19 @@ main {
     width: auto;
     height: auto;
     transform: rotate(-2deg);
-    box-shadow: 0 20px 42px #72485d30;
+    box-shadow: 0 20px 42px #1e314430;
     background: white;
 }
 
 .sparkle {
-    color: #d8618c;
+    color: #2b7bb9;
     margin: 0 0 8px;
     font-size: 26px;
 }
 
 .error {
     font-size: 13px;
-    color: #b8355a;
+    color: #1d5d8f;
     margin: 12px auto;
     text-align: center;
     max-width: 620px;
@@ -582,7 +581,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #b59da8;
+    color: #7d9ab3;
     font-size: 11px;
     padding-top: 20px;
 }
@@ -710,3 +709,5 @@ main {
         transition-duration: .01ms !important;
     }
 }
+
+```
