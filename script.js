@@ -1,4 +1,3 @@
-
 const main = document.getElementById('main');
 
 const labels = [
@@ -12,13 +11,13 @@ const labels = [
 
 const palette = [
     ['Classic white', '#ffffff'],
-    ['Blush pink', '#ffd8e6'],
-    ['Butter yellow', '#fff1ba'],
-    ['Lavender', '#e7dcff'],
-    ['Sage green', '#d9e9db'],
-    ['Baby blue', '#d9e9fa'],
-    ['Soft peach', '#ffe0ca'],
-    ['Midnight', '#302b38']
+    ['Glacier ice', '#d6f0ff'],
+    ['Frost mint', '#d8f3ee'],
+    ['Periwinkle', '#dce4ff'],
+    ['Powder blue', '#cbe2f6'],
+    ['Sky mist', '#bae0ff'],
+    ['Arctic silver', '#e3edf5'],
+    ['Deep navy', '#1d2d44']
 ];
 
 let state = {
@@ -190,7 +189,7 @@ function render() {
                 </div>
 
                 <div class="options">
-                    <h3>A little color magic ✿</h3>
+                    <h3>A little color magic</h3>
                     <p>Pick the perfect shade for your ${state.layout === 'polaroid' ? 'polaroid' : 'photo strip'}.</p>
 
                     <div class="swatches">
@@ -278,7 +277,7 @@ function render() {
             'A moment to keep forever.',
             'Your photo booth memory is ready! Save it, share it, or make another one.',
             `<div class="result">
-                <div class="sparkle">✦ ♡ ✦</div>
+                <div class="sparkle">♡</div>
 
                 <canvas id="resultCanvas" aria-label="Your finished photo booth print"></canvas>
 
@@ -401,7 +400,7 @@ function renderCamera() {
                 <div class="count hide" id="countdown"></div>
 
                 <div class="hint" id="cameraHint">
-                    Smile for photo ${Math.min(state.shots.length + 1, total)} of ${total} ✨
+                    Smile for photo ${Math.min(state.shots.length + 1, total)} of ${total}
                 </div>
             </div>
 
@@ -413,7 +412,7 @@ function renderCamera() {
                 <div class="thumbs" id="photoThumbs">${thumbs()}</div>
 
                 <button class="btn" id="snapBtn" ${state.shots.length === total ? 'disabled' : ''}>
-                    ${state.shots.length === total ? 'All done!' : 'Take photo ✦'}
+                    ${state.shots.length === total ? 'All done!' : 'Take photo'}
                 </button>
 
                 <div style="height:10px"></div>
@@ -485,7 +484,7 @@ async function snap() {
         return;
     }
 
-    count.textContent = '✦';
+    count.textContent = '♡';
 
     const c = document.createElement('canvas');
     c.width = 1000;
@@ -550,7 +549,7 @@ function renderUpload() {
 
     zone.addEventListener('dragover', e => {
         e.preventDefault();
-        zone.style.borderColor = '#d95b88';
+        zone.style.borderColor = '#2b7bb9';
     });
 
     zone.addEventListener('dragleave', () => zone.style.borderColor = '');
@@ -711,9 +710,9 @@ async function paintPreview() {
         ctx.restore();
     }
 
-    const dark = state.color === '#302b38';
+    const dark = state.color === '#1d2d44';
 
-    ctx.fillStyle = dark ? '#fffafc' : '#594252';
+    ctx.fillStyle = dark ? '#f4faff' : '#26435e';
 
     const y = H - (isPol ? 92 : 70);
     const txt = state.note.trim();
@@ -736,7 +735,7 @@ async function paintPreview() {
     } else {
         ctx.font = `${isPol ? 23 : 18}px 'DM Sans', sans-serif`;
         ctx.globalAlpha = .56;
-        ctx.fillText('✿ freezy breezy booth', W / 2, y);
+        ctx.fillText('freezy breezy booth', W / 2, y);
         ctx.globalAlpha = 1;
     }
 }
