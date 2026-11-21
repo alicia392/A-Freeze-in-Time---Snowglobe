@@ -297,7 +297,7 @@ function render() {
             const c = document.getElementById('resultCanvas');
             const a = document.createElement('a');
 
-            a.download = `peachy-booth-${state.layout}-${Date.now()}.png`;
+            a.download = `freezy-breezy-booth-${state.layout}-${Date.now()}.png`;
             a.href = c.toDataURL('image/png');
             a.click();
         };
@@ -722,13 +722,13 @@ async function paintPreview() {
     ctx.textBaseline = 'middle';
 
     if (txt) {
-        ctx.font = `${isPol ? 60 : 47}px Pacifico, cursive`;
+        ctx.font = `${isPol ? 60 : 47}px 'Dancing Script', cursive`;
 
         let size = isPol ? 60 : 47;
 
         while (ctx.measureText(txt).width > W - 80 && size > 20) {
             size -= 2;
-            ctx.font = `${size}px Pacifico, cursive`;
+            ctx.font = `${size}px 'Dancing Script', cursive`;
         }
 
         ctx.fillText(txt, W / 2, y);
@@ -736,7 +736,7 @@ async function paintPreview() {
     } else {
         ctx.font = `${isPol ? 23 : 18}px 'DM Sans', sans-serif`;
         ctx.globalAlpha = .56;
-        ctx.fillText('✿ peachy booth', W / 2, y);
+        ctx.fillText('✿ freezy breezy booth', W / 2, y);
         ctx.globalAlpha = 1;
     }
 }
