@@ -633,7 +633,7 @@ main {
   min-height: 20px;
   margin-top: 8px;
 }
-/* winter theme overrides */
+
 :root {
   --ink: #17314c;
   --muted: #5e7a98;
@@ -936,7 +936,7 @@ body {
   }
 }
 
-/* Illustrated photo frame selection */
+
 .print-section {
   font:
     600 20px "Playfair Display",
