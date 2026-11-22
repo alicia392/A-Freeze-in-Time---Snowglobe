@@ -1,4 +1,4 @@
-/* Private, browser-local gallery storage. No photos are uploaded. */
+
 const PeachyGallery = (() => {
   const DB_NAME = "peachy-photo-booth-gallery";
   const STORE = "prints";
