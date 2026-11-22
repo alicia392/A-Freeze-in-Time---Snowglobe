@@ -5,7 +5,7 @@ It's a virtual photobooth for anyone who want to preserve their memories.
 **live demo:** https://alicia392.github.io/A-Freeze-in-Time---Snowglobe/
 **built by:** Alicia @alicia392, Sophel @sopheldalulu
 
-![screenshot of the project](screenshot.png)
+![alt text](<Image 11-22-26 at 2.19 PM.png>)
 
 ## how do you use it?
 
