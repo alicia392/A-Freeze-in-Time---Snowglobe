@@ -6,7 +6,7 @@
    To change those labels, replace the images in /assets/.
    =============================================================== */
 window.BOOTH_TEXT = {
-  brand: "snowy booth",
+  brand: "A Freeze In Time",
   galleryNav: "My Gallery",
   progress: ["Start", "Frame", "Photos", "Color", "Note", "Finished"],
   start: { title: "Photo Booth", subtitle: "Choose how to add photos." },
