@@ -194,7 +194,10 @@ function render() {
       5,
       T.done.title,
       T.done.subtitle,
-      `<div class="result"><div class="sparkle">❄</div><canvas id="resultCanvas" aria-label="Your finished photo booth print"></canvas><div class="actions"><button class="btn" id="saveBtn">${T.done.download}</button><a class="image-gallery-link result-gallery-link" id="resultGalleryLink" href="gallery.html" aria-label="View gallery"><img src="assets/gallery-button.png" alt="My Gallery"></a><button class="btn secondary" id="restartBtn">${T.done.restart}</button></div><p class="save-status" id="saveStatus" role="status">${T.done.saving}</p><p class="fine">${T.done.info}</p></div>`,
+      `<div class="result"><div class="sparkle">❄</div><canvas id="resultCanvas" aria-label="Your finished photo booth print"></canvas><div class="actions"><button class="btn" id="saveBtn">${T.done.download}</button><a class="btn secondary" href="gallery.html"
+   style="text-decoration:none">
+  ♡ View my gallery →
+</a><button class="btn secondary" id="restartBtn">${T.done.restart}</button></div><p class="save-status" id="saveStatus" role="status">${T.done.saving}</p><p class="fine">${T.done.info}</p></div>`,
     );
     paintPreview()
       .then(saveFinishedPrint)
@@ -335,7 +338,9 @@ function renderCamera() {
     2,
     T.camera.title,
     T.camera.subtitle,
-    `<div class="capture-layout"><div class="camera-shell"><video id="cameraVideo" autoplay muted playsinline aria-label="Live camera preview"></video><div class="count hide" id="countdown"></div><div class="hint" id="cameraHint">Smile for photo ${Math.min(state.shots.length + 1, total)} of ${total} ✨</div></div><div class="shots-panel"><h3>${T.camera.snapshots}</h3><p id="shotText">${state.shots.length} of ${total} photos taken</p><div class="thumbs" id="photoThumbs">${thumbs()}</div><button class="btn" id="snapBtn" ${state.shots.length === total ? "disabled" : ""}>${state.shots.length === total ? "${T.camera.finished}" : "${T.camera.capture}"}</button><div style="height:10px"></div><button class="btn secondary" id="retakeBtn" ${state.shots.length ? "" : "disabled"}>${T.camera.retake}</button></div></div><p class="error" id="cameraError" role="alert"></p>${actions(
+    `<div class="capture-layout"><div class="camera-shell"><video id="cameraVideo" autoplay muted playsinline aria-label="Live camera preview"></video><div class="count hide" id="countdown"></div><div class="hint" id="cameraHint">Smile for photo ${Math.min(state.shots.length + 1, total)} of ${total} ✨</div></div><div class="shots-panel"><h3>${T.camera.snapshots}</h3><p id="shotText">${state.shots.length} of ${total} photos taken</p><div class="thumbs" id="photoThumbs">${thumbs()}</div><button class="btn" id="snapBtn" ${state.shots.length === total ? "disabled" : ""}>
+  ${state.shots.length === total ? T.camera.finished : T.camera.capture}
+</button><div style="height:10px"></div><button class="btn secondary" id="retakeBtn" ${state.shots.length ? "" : "disabled"}>${T.camera.retake}</button></div></div><p class="error" id="cameraError" role="alert"></p>${actions(
       () => {},
       () => {},
       state.shots.length !== total,
