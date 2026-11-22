@@ -494,7 +494,6 @@ function escapeHtml(s) {
       ],
   );
 }
-// Illustrated designs are supplied as PNG overlays whose photo windows are transparent.
 const illustratedFrames = [
   {
     id: "friends",
@@ -557,7 +556,7 @@ async function paintIllustrated(canvas) {
   );
   if (!canvas.isConnected) return;
   if (frame.id === "snowglobe") {
-    // Keep image within glass dome while original semi-transparent highlights stay on top.
+    
     ctx.save();
     ctx.beginPath();
     ctx.ellipse(720, 590, 658, 516, 0, 0, Math.PI * 2);
