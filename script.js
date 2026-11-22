@@ -515,7 +515,7 @@ function escapeHtml(s) {
 const illustratedFrames = [
   {
     id: "friends",
-    name: "Winter Friends",
+    name: "Winter Frame",
     src: "frames/friends.png",
     count: 3,
     w: 702,
@@ -528,7 +528,7 @@ const illustratedFrames = [
   },
   {
     id: "city",
-    name: "City Love",
+    name: "Golden Gate Bridge",
     src: "frames/city.png",
     count: 3,
     w: 701,
@@ -541,7 +541,7 @@ const illustratedFrames = [
   },
   {
     id: "icicles",
-    name: "Snowy Icicles",
+    name: "Snowy Frame",
     src: "frames/icicles.png",
     count: 4,
     w: 713,
