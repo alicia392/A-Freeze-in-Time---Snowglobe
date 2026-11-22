@@ -93,7 +93,7 @@ function render() {
     main.innerHTML = shell(
       0,
       "Your winter moment, your way.",
-      "A little frosty magic, a few snapshots, and a memory you can keep forever. How would you like to start?",
+      "photos frozen in time",
       `<div class="choice-grid"><button class="choice" id="cameraChoice"><div class="choice-icon">${icons.camera}</div><h3>Use my camera</h3><p>Snap your pictures live with a cozy little countdown.</p></button><button class="choice" id="uploadChoice"><div class="choice-icon">${icons.upload}</div><h3>Upload photos</h3><p>Turn favorite pictures from your device into a snowy keepsake.</p></button></div>`,
     );
     document.getElementById("cameraChoice").onclick = () => {
@@ -317,7 +317,7 @@ function renderCamera() {
   main.innerHTML = shell(
     2,
     "Lights, camera, you!",
-    "Get ready for your close-up. Each photo starts after a five-second countdown.",
+    "Get ready for the photo ",
     `<div class="capture-layout"><div class="camera-shell"><video id="cameraVideo" autoplay muted playsinline aria-label="Live camera preview"></video><div class="count hide" id="countdown"></div><div class="hint" id="cameraHint">Smile for photo ${Math.min(state.shots.length + 1, total)} of ${total} ✨</div></div><div class="shots-panel"><h3>Your snapshots ♡</h3><p id="shotText">${state.shots.length} of ${total} photos taken</p><div class="thumbs" id="photoThumbs">${thumbs()}</div><button class="btn" id="snapBtn" ${state.shots.length === total ? "disabled" : ""}>${state.shots.length === total ? "All done!" : "Take photo ✦"}</button><div style="height:10px"></div><button class="btn secondary" id="retakeBtn" ${state.shots.length ? "" : "disabled"}>Retake last</button></div></div><p class="error" id="cameraError" role="alert"></p>${actions(
       () => {},
       () => {},
@@ -355,8 +355,7 @@ async function snap() {
   document.getElementById("retakeBtn").disabled = true;
   const count = document.getElementById("countdown");
   count.classList.remove("hide");
-  for (let i = 5; i >= 1; i--) {
-    if (state.step !== 2 || state.source !== "camera") {
+for (let i = 3; i >= 1; i--) {     
       counting = false;
       return;
     }
