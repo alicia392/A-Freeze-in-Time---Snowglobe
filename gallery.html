@@ -1,1 +1,51 @@
-
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#e9f5ff">
+  <title>Winter Memories · Snowy Booth</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+  <div class="snowfall" id="snowfall" aria-hidden="true"></div>
+  <div class="page">
+    <header class="topbar">
+      <a href="index.html" class="wordmark"><span class="brand-icon">❄</span> snowy booth<span class="wordmark-dot">.</span></a>
+      <a class="booth-link" href="index.html"><span aria-hidden="true">←</span> Back to booth</a>
+    </header>
+    <main class="gallery-main">
+      <div class="eyebrow"><span class="tiny-star">✧</span> YOUR LITTLE WINTER COLLECTION <span class="tiny-star">✧</span></div>
+      <h1>Memories in a snow globe<span class="heading-star">✦</span></h1>
+      <p class="intro">A quiet place for your favorite moments. Watch them drift by.</p>
+      <section class="gallery-scene" aria-label="Your saved photo carousel">
+        <div class="snowglobe" aria-hidden="true"><div class="snowglobe-shine"></div><div class="globe-flakes" id="globeFlakes"></div></div>
+        <div class="gallery-stage" id="stage" aria-roledescription="carousel" aria-label="Photo booth prints" aria-live="off">
+          <div class="empty"><div class="empty-mark" aria-hidden="true">❄</div><h2>Your globe is waiting</h2><p>Make your first photo booth print and it will appear here.</p><a href="index.html" class="primary-link">Make a photo <span aria-hidden="true">↗</span></a></div>
+        </div>
+        <div class="globe-base" aria-hidden="true"><span>❄</span><span>WINTER MEMORIES</span><span>❄</span></div>
+      </section>
+      <div class="gallery-ui" id="galleryControls" hidden>
+        <div class="progress-line" id="progressLine" aria-hidden="true"><div id="progressFill"></div></div>
+        <p id="counter" class="counter" aria-live="polite"></p>
+        <div class="controls">
+          <button id="prev" class="arrow" type="button" aria-label="Previous photo">←</button>
+          <button id="pause" class="play-btn" type="button" aria-pressed="false">Ⅱ Pause</button>
+          <button id="next" class="arrow" type="button" aria-label="Next photo">→</button>
+        </div>
+        <div class="secondary-actions">
+          <button id="download" type="button" class="text-action">↓ Save print</button>
+          <span class="separator" aria-hidden="true">·</span>
+          <button id="delete" type="button" class="text-action delete">Remove photo</button>
+        </div>
+      </div>
+      <p class="privacy">Just for you: prints are saved in this browser, not uploaded or synced. Download favorites before clearing your browser data.</p>
+    </main>
+  </div>
+  <script src="gallery-db.js"></script>
+  <script src="gallery.js"></script>
+</body>
+</html>
