@@ -194,7 +194,7 @@ function render() {
       5,
       T.done.title,
       T.done.subtitle,
-      `<div class="result"><div class="sparkle">❄</div><canvas id="resultCanvas" aria-label="Your finished photo booth print"></canvas><div class="actions"><button class="btn" id="saveBtn">${T.done.download}</button><button class="btn secondary" id="restartBtn">${T.done.restart}</button></div><p class="save-status" id="saveStatus" role="status">${T.done.saving}</p><p class="fine">${T.done.info}</p></div>`,
+      `<div class="result"><div class="sparkle">❄</div><canvas id="resultCanvas" aria-label="Your finished photo booth print"></canvas><div class="actions"><button class="btn" id="saveBtn">${T.done.download}</button><a class="image-gallery-link result-gallery-link" id="resultGalleryLink" href="gallery.html" aria-label="View gallery"><img src="assets/gallery-button.png" alt="My Gallery"></a><button class="btn secondary" id="restartBtn">${T.done.restart}</button></div><p class="save-status" id="saveStatus" role="status">${T.done.saving}</p><p class="fine">${T.done.info}</p></div>`,
     );
     paintPreview()
       .then(saveFinishedPrint)
@@ -210,6 +210,16 @@ function render() {
       a.href = c.toDataURL("image/png");
       a.click();
     };
+    document
+      .getElementById("resultGalleryLink")
+      .addEventListener("click", async (e) => {
+        e.preventDefault();
+        const link = e.currentTarget;
+        link.setAttribute("aria-busy", "true");
+        const saved = await saveFinishedPrint();
+        link.removeAttribute("aria-busy");
+        if (saved) window.location.href = "gallery.html";
+      });
     document.getElementById("restartBtn").onclick = () => {
       state = {
         step: 0,
