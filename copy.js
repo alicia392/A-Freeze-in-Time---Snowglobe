@@ -44,7 +44,7 @@ window.BOOTH_TEXT = {
   },
   camera: {
     title: "Take photos",
-    subtitle: "5-second countdown for each photo.",
+    subtitle: "3 second countdown for each photo.",
     shotLabel: "Photo",
     snapshots: "Photos",
     capture: "Take photo",
