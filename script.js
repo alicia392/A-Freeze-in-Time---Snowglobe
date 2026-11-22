@@ -372,7 +372,7 @@ async function snap() {
   document.getElementById("retakeBtn").disabled = true;
   const count = document.getElementById("countdown");
   count.classList.remove("hide");
-  for (let i = 5; i >= 1; i--) {
+  for (let i = 3; i >= 1; i--) {
     if (state.step !== 2 || state.source !== "camera") {
       counting = false;
       return;
