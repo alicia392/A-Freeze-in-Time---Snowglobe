@@ -28,4 +28,3 @@ const PeachyGallery = (() => {
   const clear = () => operate('readwrite', store => store.clear());
   return { add, all, remove, clear };
 })();
-
